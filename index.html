@@ -265,7 +265,48 @@
 
         <iframe src="https://www.youtube.com/watch?v=lYZq1HVTAIY" title="youtube video" frameborder="0"></iframe> 
             
-             
+<form>
+    <fieldset> <!-- na lejon me nau shfaq nje border-->
+        <legend> Personal information:</legend> <!-- nalt border na lejon me shenu-->
+    <label for="firstname" >  First Name</label><br> <!-- ma mundson me lan nje labelit per me shfaq nje te dhem te perdoruesit-->
+    <input type="text" id="firstname" name="first name" value="Erda" readonly> <br> <!-- na mundson me lan nje input te tipit tekst--> <!-- type na lejon me shenu ar nje input te tipit te textit psh.,text, date, password, email, number, etc,. -->
+    <label for="lastname" >  Last Name</label><br>
+    <input type="text" id="lastname" name="lastname"  disabled> <br> 
+
+    <!-- value na lejon qe ne user me shenu diqka--> <!-- readonly na mundson qe ne user mos me mujt me ndrru emrin--> <!--disable na mundson qe me blloku user -->
+
+    <label for="email" >  email</label><br>
+    <input type="email" id="email" name="email" required >  <br>
+    <label for="password" > password</label><br>
+    <input type="password" id="password" name="password" value="kljslkjslk" size="40">  <br> <!-- size na mundson rritjen e inputit-->
+    <label for="number" > number</label><br>
+    <input type="number" id="number" name="number" placeholder=""> <br>
+
+
+    <label> Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="male"> <!-- na mundeson me vendos gjinin-->
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">  <!-- na mundeson me vendos gjinin-->
+    <label for="female">Feale</label><br>
+
+    <label> Hoobies:</label><br>
+    <input type="checkbox" id="gaming" name="gaming" value="gaming">
+    <label for="gaming">gaming</label><br>
+
+    <input type="checkbox" id="futball" name="futball" value="futball">
+    <label for="futball">futball</label><br>
+
+    <input type="checkbox" id="swiming" name="swiming" value="swiming">
+    <label for="swiming">swiming</label><br>
+    <!-- cka dallon radio prej checkbox eshte se radio te lejon me selektu vetem nje ndersa chackbox-->
+
+    <br><br>
+    <textarea name="message" rows="10" cols="10"></textarea> <!-- na mundson me vendos nje flet te bardh ku mundem me shenu-->
+    <br><br>
+
+    <input type="submit" id="submit" name="submit" maxlength="50"> <br> <br>   <!-- na mundson me ba clear --> 
+</fieldset>
+</form>         
             
 
             
