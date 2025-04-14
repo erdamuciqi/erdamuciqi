@@ -1,36 +1,5 @@
 div{
-    margin: 100px 100px 100px 100px; 
-}
-
-div{
-    height: 200px;
-    max-width: 500px;
-    background-color: brown ;
-}
-
-body{
-    /* background-color: rgb(131, 134, 189);*/ 
-    background:url("../images/1.png") ;
-    background-size: cover ;
- }
-
- div{
-    width: 100px;
-    border: 50px solid burlywood;
-    padding: 30px;
-    margin: 30px;
-
-}
-
-p{
-  
-    color: red;
-    font-size: 20px;
-  
-
-
-   border-width: 2px;
-   border-style: solid;
-   border-color: black;
-
+    background-color: aqua;
+    padding: 20px;
+    margin: 2px;
 }
