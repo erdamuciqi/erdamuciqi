@@ -1,0 +1,93 @@
+/*ul{
+    /*list-style-type: square;
+    list-style-image: url("../images/1.jpg") ;
+}*/
+
+/*ul{
+    list-style-type:none;
+    border: 0;
+    padding:2px solid gray;
+}
+
+ul li{
+    border: 8px 16p;
+    padding-bottom: 2px solid gray;
+}*/
+
+
+
+ol{
+    background-color: blueviolet; 
+    padding: 15px;
+}
+
+ol li{
+    background-color: brown;
+    padding: 10px;
+    margin-left: 30px; 
+}
+
+
+
+ul{
+    background-color: #f1f1f1;;  /*ps: ves mos ma mer per te madhe se kom msu ton naten ne biologji e spo ma don knej*//*jo qe spo ma don po sss*/
+    list-style-type: none;
+    padding: 15px 25px;
+    font-size: 15px;
+    border-left: 5px solid green;
+
+}
+
+
+table{
+    border-collapse: collapse;
+}
+
+td th{
+    border: 1px solid black;
+    padding: 15px;
+}
+
+tbody tr:nth-child(odd){
+    background-color:#ff33cc;
+ 
+}
+
+tbody tr:nth-child(even){
+    background-color: #e495e4;
+}
+
+
+div{
+    overflow: scroll;
+    background-color: #e495e4;
+    width:200px;
+    height: 200px;
+}
+
+/* visible, hidden, scroll,auto */
+
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th td{
+    text-align: left;
+    padding: 10px;
+}
+
+th:nth-child(even){
+    background-color: #e495e4;
+}
+
+
+
+
+
+
+
+
+
+
