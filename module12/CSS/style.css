@@ -66,3 +66,20 @@ div{
     font-size: oblique;
     font-weight:900 ;
 }
+
+a:link{
+    color: beige;
+}
+
+a:visited{
+    color: wheat
+}
+
+a:hover{
+    color: black;
+
+}
+
+a:active{
+    color: brown;
+}
