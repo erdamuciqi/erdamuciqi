@@ -1,0 +1,32 @@
+#static-postion{   /*e shtin divin ne katror jo h1*/
+    position: static;
+    border: 3px solid darkblue;
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+}
+
+
+#Static-relative{  
+    position: relative;
+    border: 3px solid darkblue;
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+    left: 200px;       /* e vendos sa me largu katrorin prej qendres ne anene e majte*/
+    top: 20px;      /*  e vendos sa me vendos posht eshe lart divin*/
+}
+
+
+
+
+#Static-fixed{  
+    position: fixed;
+    border: 3px solid darkblue;
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+    right: 200px;       
+    top: 20px;      
+}
+
