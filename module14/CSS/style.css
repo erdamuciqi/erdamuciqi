@@ -1,4 +1,4 @@
-/*article p{
+article p{
     background-color: blue;
     color: aqua;
     padding: 20px;
@@ -17,16 +17,16 @@ article ~ p{
 
 article + p{
     background-color: orange;
-}*/
+}
 
 
-/*h3:first-child{
+h3:first-child{
     background-color: blueviolet;
     color: white;
 }*/
 
 
-/*input:in-range{
+input:in-range{
     border: 3px solid green;
 }
 
@@ -41,16 +41,16 @@ input:required{
 
 input:focus{
     background-color: yellow;
-}*/
+}
 
 
-/*span:first-of-type{
+span:first-of-type{
     background-color: #9ee5f0;
     color: blue;
     padding: 10px;
-}*/
+}
 
-/*input:invalid{
+input:invalid{
     border: 2px solid red;
 
 }
@@ -66,7 +66,7 @@ p::first-line{
 
 p::first-letter{
     font-size: 40px;
-}*/
+}
 
 h1::after{
     content: url("../CSS/check.png");
@@ -74,4 +74,8 @@ h1::after{
 
 h1::before{
     content: url("../CSS/check.png");
+}
+
+.p5{
+    opacity: 0.5;
 }
