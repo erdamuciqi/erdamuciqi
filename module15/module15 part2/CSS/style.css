@@ -41,7 +41,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.navbar{
+.navbar a{
     float: left;
     font-size: 16px;
     color: white;
@@ -67,13 +67,13 @@ body{
 }
 
 .navbar a:hover, .dropdown:hover, .dropbtn{
-    background-color: green;
+    background-color: #acaf50;
 }
 
 .dropdown-content{
     display: none;
     position: absolute;
-    background-color: black;
+    background-color: #f9f9f9;
     width: 100%;
     left: 0;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -81,27 +81,27 @@ body{
 }
 
 .dropdown:hover .dropdown-content{
-    display: black;
+    display: block;
 }
 
 .column{
     float: left;
     width: 33.33%;
     padding: 10px;
-    background-color: blueviolet;
+    background-color: #ccc;
     height: 250px;
 }
 
 .column a{
     float: none;
-    color: red;
-    padding: 10px;
+    color:  black;
+    padding: 16px;
     display: block;
     text-align: left;
 }
 
 .column a:hover{
-    background-color: greenyellow;
+    background-color: #ddd;
 }
 
 .row::after{
@@ -110,4 +110,33 @@ body{
     clear: both;
 }
 
+#vertical-menu{
+    list-style-type: none;
+    margin: 0;
+    width: 25%;
+    height: 100%;
+    padding: 0;
+    background-color: #f1f1f1;
+    position: fixed;
+    overflow: auto;
+
+}
+
+#vertical-menu li a{
+    text-decoration:none ;
+    color: black;
+    padding: 8px 16px;
+    display: block;  /*nuk i lejon qe elementet me dal ne nje rresht*/
+}
+
+
+#vertical-menu li a.active{
+    background-color: #acaf50;
+    color: white;
+}
+
+#vertical-menu li a.hover:not(.active){
+    background-color: #333;
+    color: white;
+}
 
