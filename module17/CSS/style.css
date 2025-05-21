@@ -58,7 +58,7 @@
 }*/
 
 
-body{
+/*body{
     counter-reset:number ;
 }
 
@@ -71,7 +71,32 @@ h2::before{
     border-radius: 50%;
     padding: 5px;
 
+}*/
+
+/*:root{
+    --primary-color: #a1a1a1;
+    --secondary-color: #222;
+    --padding: 20px;
 }
+
+h1{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: var(--padding);
+}
+
+p{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: var(--padding);
+}*/
+
+.img{
+    width: 150px;
+    height: 150px;
+}
+
+
 
 
 
