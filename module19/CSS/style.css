@@ -1,0 +1,172 @@
+.container{
+    display: flex;
+    background: #000;
+}
+
+.container div{
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    font-size: 35px;
+
+}
+/*flex order*/         /*ndrron radhitjen e numrave*/
+.container div:nth-child(1){
+    order: 2;
+}
+.container div:nth-child(2){
+    order: 0;
+}
+.container div:nth-child(3){
+    order: 4;
+}
+.container div:nth-child(4){
+    order: 3;
+}
+
+/*flex-direction*/  /*e ndrron poziten e katrorve ne rresht dhe kolon*/
+.container2{
+    display: flex;
+    background: #000;
+    /*flex-direction: column;*/
+    /*flex-direction: column-reverse;*/
+   /* flex-direction: row;*/
+    flex-direction: row-reverse;
+}
+
+.container2 div{
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    font-size: 35px;
+
+}
+/*flex-grow*/  /*e bon njonin katror me te madh*/
+.container3{
+    display: flex;
+    background: #000;
+    flex-direction: row;
+}
+
+.container3 div{
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    font-size: 35px;
+
+}
+
+.container3 div:nth-child(3){
+    flex-grow: 4;
+}
+
+/*flex-wrap*/
+
+.container4{
+    display: flex;
+    background: #000;
+    flex-direction: row;
+    /*flex-wrap: nowrap;*/
+   flex-wrap: wrap;
+   /* flex-wrap: wrap-reverse;*/
+}
+
+.container4 div{
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    font-size: 35px;
+    width: 30%;
+
+}
+
+/* justify-content
+- flex-start
+- flex-end
+-center
+- space-between
+- space-around
+- space-evenly */
+
+.container5{
+    display: flex;
+    background: #000;
+    flex-direction: row;
+    justify-content: flex-end;  
+}
+
+.container5 div{
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    font-size: 35px;
+    width: 30%;
+}
+
+
+/* align-items */
+/* - stretch
+- flex-start
+- flex-end
+- center
+- baseline */
+
+
+
+.container6{
+    display: flex;
+    background: #000;
+    flex-direction: row;
+    height: 200px;
+    align-items: flex-end;
+}
+
+.container6 div{
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    font-size: 35px;
+   
+}
+
+
+.container6 div:nth-child(1){
+    height: 20px;
+}
+
+.container6 div:nth-child(2){
+    height: 100px;
+}
+.container6 div:nth-child(3){
+    height: 30px;
+}
+.container6 div:nth-child(4){
+    height: 20px;
+}
+
+/* align-content
+flex-start
+flex-end
+center
+space-between
+space-around
+stretch */
+
+.container7{
+    display: flex;
+    background: #000;
+    flex-direction: row;
+    height: 800px;
+   flex-wrap: wrap;
+   align-content: flex-start;
+}
+
+.container7 div{
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    font-size: 35px;
+width: 200px;
+height: 400px;   
+}
+
