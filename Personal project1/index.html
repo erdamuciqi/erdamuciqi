@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+
+   
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <div class="logo-icon">🍪</div>
+                    <div class="logo-text">
+                        <h1>CookieGuard</h1>
+                        <span>Premium Cookie Management</span>
+                    </div>
+                </div>
+                <button class="settings-btn" onclick="openDashboard()">
+                    <span>⚙️</span>
+                    Cookie Settings
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="Images/3.avif" alt="" width="1800px" height="1000px">
+           
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Smart Cookie Management</h2>
+                <p class="hero-subtitle">Take full control of your website's cookies with our beautiful, privacy-focused management system. Customize preferences, monitor usage, and ensure GDPR compliance.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="showBanner()">View Cookie Banner</button>
+                    <a href="#features" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Cookie Categories</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon essential">🛡️</div>
+                    <h3>Essential Cookies</h3>
+                    <p>Critical cookies that ensure basic website functionality, security, and user authentication.</p>
+                    <div class="feature-image">
+                        <img src="Images/1.jpg" alt="">
+                        
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon analytics">📊</div>
+                    <h3>Analytics Cookies</h3>
+                    <p>Help us understand how visitors interact with our website to improve user experience.</p>
+                    <div class="feature-image">
+                        <img src="Images/4.webp" alt="">
+                        
+                       
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon marketing">🎯</div>
+                    <h3>Marketing Cookies</h3>
+                    <p>Used to deliver personalized advertisements and measure campaign effectiveness.</p>
+                    <div class="feature-image">
+                        <img src="Images/5.jpg" alt="">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Active Cookies Section -->
+    <section class="cookies-display">
+        <div class="container">
+            <div class="cookies-header">
+                <h2>Active Cookies</h2>
+                <span class="cookie-count" id="cookieCount">0 cookies</span>
+            </div>
+            <div class="cookies-list" id="cookiesList">
+                <div class="no-cookies">
+                    <div class="no-cookies-icon">🍪</div>
+                    <p>No cookies found. Accept cookies to see them here.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="banner-content">
+            <div class="banner-header">
+                <div class="banner-icon">🍪</div>
+                <div class="banner-text">
+                    <h3>Cookie Preferences</h3>
+                    <p>We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. Choose which cookies you're comfortable with.</p>
+                </div>
+            </div>
+            
+            <div class="cookie-options">
+                <div class="cookie-option">
+                    <div class="option-info">
+                        <span class="option-icon">🛡️</span>
+                        <div>
+                            <strong>Essential Cookies</strong>
+                            <small>Required for basic site functionality</small>
+                        </div>
+                    </div>
+                    <div class="toggle-switch active">
+                        <div class="toggle-slider"></div>
+                    </div>
+                </div>
+                
+                <div class="cookie-option">
+                    <div class="option-info">
+                        <span class="option-icon">📊</span>
+                        <div>
+                            <strong>Analytics Cookies</strong>
+                            <small>Help us improve our website</small>
+                        </div>
+                    </div>
+                    <div class="toggle-switch" onclick="togglePreference('analytics', this)">
+                        <div class="toggle-slider"></div>
+                    </div>
+                </div>
+                
+                <div class="cookie-option">
+                    <div class="option-info">
+                        <span class="option-icon">🎯</span>
+                        <div>
+                            <strong>Marketing Cookies</strong>
+                            <small>For personalized advertisements</small>
+                        </div>
+                    </div>
+                    <div class="toggle-switch" onclick="togglePreference('marketing', this)">
+                        <div class="toggle-slider"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="banner-buttons">
+                <button class="btn btn-outline" onclick="rejectAll()">Reject All</button>
+                <button class="btn btn-primary" onclick="acceptSelected()">Accept Selected</button>
+                <button class="btn btn-success" onclick="acceptAll()">Accept All</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Dashboard Modal -->
+    <div class="dashboard-modal" id="dashboardModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Cookie Management Dashboard</h2>
+                <button class="close-btn" onclick="closeDashboard()">✕</button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="add-cookie-section">
+                    <h3>🍪 Add New Cookie</h3>
+                    <div class="add-cookie-form">
+                        <input type="text" id="cookieName" placeholder="Cookie name">
+                        <input type="text" id="cookieValue" placeholder="Cookie value">
+                        <select id="cookieCategory">
+                            <option value="essential">Essential</option>
+                            <option value="analytics">Analytics</option>
+                            <option value="marketing">Marketing</option>
+                        </select>
+                        <button class="btn btn-primary" onclick="addCookie()">Add</button>
+                    </div>
+                </div>
+                
+                <div class="preferences-section">
+                    <h3>Current Preferences</h3>
+                    <div class="preferences-list" id="preferencesList">
+                        <!-- Preferences will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="modal-actions">
+                    <button class="btn btn-primary" onclick="savePreferences()">💾 Save Preferences</button>
+                    <button class="btn btn-outline" onclick="resetConsent()">🔄 Reset Consent</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CookieGuard</h4>
+                    <p>Premium cookie management solution for modern websites.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📧</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">💼</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">GDPR Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Status Page</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CookieGuard. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+        
+</body>
+</html>
